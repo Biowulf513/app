@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<div class="container">
+    <div class="row">
+        <div class="hidden-xs hidden-sm"><!-- ПК версия -->
+            <div id="Carousel" class="carousel slide">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                    </div><!--.item-->
+
+                    <div class="item">
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                    </div><!--.item-->
+
+                    <div class="item">
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                    </div><!--.item-->
+
+{#                        </div><!--.carousel-inner-->#}
+{#                          <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>#}
+{#                          <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>#}
+{#                        </div><!--.Carousel-->#}
+
+                </div>
+
+                <div class="carousel_navigation">
+                    <!-- Навигация для карусели -->
+                    <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+                    <a class="carousel-control left" href="#Carousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+                    <a class="carousel-control right" href="#Carousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="visible-xs visible-sm"><!-- Мобильная версия -->
+            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+        </div>
+    </div><!--.container-->
+</div>
