@@ -25,12 +25,15 @@ class Location(models.Model):
 
 # class Content(models.Model):
 #     class Meta:
-#         verbose_name = ('')
-#         verbose_name_plural = ('')
-#
-#     pass
+#         verbose_name = ('Новость')
+#         verbose_name_plural = ('Новости')
 #
 #
+#
+
+
+
+
 # class Media(models.Model):
 #     class Meta:
 #         verbose_name = ('')
@@ -38,10 +41,16 @@ class Location(models.Model):
 #
 #     pass
 #
-class News(models.Model):
+class Event(models.Model):
     class Meta:
-        verbose_name = ('Новость')
-        verbose_name_plural = ('Новости')
+        verbose_name = ('Мероприятие')
+        verbose_name_plural = ('Мероприятия')
 
     location = models.ForeignKey (Location, verbose_name='Место проведения', on_delete=models.CASCADE)
-    event_date = models.DateTimeField ('Дата проведения', )
+    title = models.CharField(max_length=20, verbose_name='Заголовок')
+    text = models.TextField(max_length=200, verbose_name='Текст')
+    event_date = models.DateField ('Дата проведения')
+    publication_date = models.DateTimeField ('Дата публикации')
+
+    def __str__(self):
+        return 'гор.%s (%s)' %(self.location.city, self.event_date)
