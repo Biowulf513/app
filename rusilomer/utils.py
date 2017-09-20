@@ -8,7 +8,7 @@ def location_geoconing(city='', venue=''):
 
     json_data = requests.get(url)
     print_data = json_data.json()
-    coordinates = print_data['results'][0]['geometry']['viewport']['northeast']
+    coordinates = print_data['results'][0]['geometry']['location']
     lat = coordinates['lat']
     lng = coordinates['lng']
     geocoding={'lat':lat, 'lng':lng}

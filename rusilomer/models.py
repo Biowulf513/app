@@ -38,10 +38,10 @@ class Location(models.Model):
 #
 #     pass
 #
-# class News(models.Model):
-#     class Meta:
-#         verbose_name = ('Новость')
-#         verbose_name_plural = ('Новости')
-#
-#     pass
-#     # Title = models.Char
+class News(models.Model):
+    class Meta:
+        verbose_name = ('Новость')
+        verbose_name_plural = ('Новости')
+
+    location = models.ForeignKey (Location, verbose_name='Место проведения', on_delete=models.CASCADE)
+    event_date = models.DateTimeField ('Дата проведения', )
