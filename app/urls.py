@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from rusilomer.views import index
+from rusilomer.views import index, carousel_event
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='home'),
+    url(r'^test/$', carousel_event, name='test'),
     # url(r'^/', include('informant.urls'))
 ]
