@@ -20,6 +20,6 @@ from rusilomer.views import index, carousel_event
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='home'),
-    url(r'^test/$', carousel_event, name='test'),
+    url(r'^test/$', carousel_event),
     # url(r'^/', include('informant.urls'))
 ]
