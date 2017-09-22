@@ -1,12 +1,14 @@
 {% load staticfiles %}
 
-{% for even in events %}
-    {{ even }}<br>
-{% endfor %}
+{#{% for even in events %}#}
+{#    {{ even }}<br>#}
+{#{% endfor %}#}
 {#{{ events }}#}
-<br>
-<br>
-{{ central }}
+{#<br>#}
+{#<br>#}
+{#{{ events1 }}<br>#}
+{#{{ events2 }}<br>#}
+{#{{ events3 }}<br>#}
 
 <div class="container">
     <div class="row">
@@ -23,30 +25,50 @@
                 <div class="carousel-inner">
 
                     <div class="item active">
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_all.html" %}</a></div>
+                        {% for event in events1 %}
+                            <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                        {% endfor %}
+
                     </div><!--.item-->
 
                     <div class="item">
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+{##}
+                        {% for event in events2 %}
+                            <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                        {% endfor %}
+{##}
                     </div><!--.item-->
-
+{##}
                     <div class="item">
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-                          <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+{##}
+                        {% for event in events3 %}
+                            <div class="news_label col-md-3"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+                        {% endfor %}
+                          <div class="container-fluid">
+                <div class="row">
+                     <div class="card">
+                        <img class="card-img-top" src="{% static 'rusilomer/theme/test_carousel/past.jpg' %}">
+            {#            <div class="card-block">#}
+            {#                <figure class="profile">#}
+            {#                    <img src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif" class="profile-avatar" alt="">#}
+            {#                </figure>#}
+            {#                <h4 class="card-title mt-3">Tawshif Ahsan Khan</h4>#}
+            {#                <div class="meta">#}
+            {#                    <a>Friends</a>#}
+            {#                </div>#}
+            {#                <div class="card-text">#}
+            {#                    Tawshif is a web designer living in Bangladesh.#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="card-footer">#}
+            {#                <span class="float-right">Joined in 2013</span>#}
+            {#                <button id="news_button" class="btn btn-secondary float-right btn-sm">Подробнее</button>#}
+            {#            </div>#}
+                    </div>
+                </div>
+            </div>
                     </div><!--.item-->
-
-{#                        </div><!--.carousel-inner-->#}
-{#                          <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>#}
-{#                          <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>#}
-{#                        </div><!--.Carousel-->#}
 
                 </div>
 
@@ -65,8 +87,8 @@
             </div>
         </div>
         <div class="visible-xs visible-sm"><!-- Мобильная версия -->
-            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
-            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_link.html" %}</a></div>
+            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_all.html" %}</a></div>
+            <div class="news_label col-md-3 col-sm-6 col-xs-6"><a href="#" class="">{% include "carousel_all.html" %}</a></div>
         </div>
     </div><!--.container-->
 </div>
